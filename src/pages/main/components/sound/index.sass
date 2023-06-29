@@ -1,0 +1,109 @@
+@import "../../../../sass/styles"
+@import "../../../../sass/mixins"
+
+.Sound
+    // +bdr($g, $t * .2)
+    +bdrrad($r)
+    +p($t * 2 $t * 2)
+    +pr($t * 3)
+    +bg(white)
+    +bs($t*.25 $t*.5 $t transparentize($lg2, .5))
+    +mxw(50%)
+    +f(.4)
+    
+    
+    button
+        // +bs($t*.25 $t*.5 $t transparentize($lg2, .5))
+        +cenc
+        // +dn
+        +bdrn
+        // +button
+        // +bdrb($g, $t*.5)
+        // +bdrl($g, $t*.25)
+        +p($t * 2)
+        +bdrrad($r*2)
+        svg
+            fill: white
+            +whs($t * 2)
+        +mr($t*2)
+
+    .sound-word, .sound-sentence
+        +df
+        +aic
+        // +jcb
+
+    .sound-word
+        +mb($t)
+        h1
+            +fs($t*6)
+
+    .sound-sentence
+        button
+            +p($t)
+        h2
+            +fs($t*3)
+            +c($g)
+            +posr
+            // +l($t * 1.5)
+        span
+            
+            text-decoration: underline
+    // @media (max-width: $normalscr)
+    //     button
+    //         +p($t*1.5)
+    //         +bdrrad($r*2)
+    //         svg
+    //             fill: white
+    //             +whs($t * 1.25)
+    //         +mr($t*1.25)
+    //     .sound-word
+    //         +mb($t*.5)
+    //         +posr
+    //         h1
+    //             +fs($t*5)
+    //             // +fs(500%)
+    //             // +w(80%)
+    //     .sw-small
+    //         h1
+    //             +fs($t*3.5)
+    //     .sound-sentence
+    //         button
+    //             // +p($t*.5)
+    //             +p($t*1.5)
+    //         h2
+    //             +fs($t*1.75)
+    //             +c($g)
+    //             +posr
+    @media (max-width: $smallscr)
+        +f(none)
+        +mxw(100%)
+        +mnw(90%)
+        +mnh(45%)
+        +p($t)
+        +df
+        +fdc
+        +jcc
+        button
+            +p($t)
+            +bdrrad($r*2)
+            svg
+                fill: white
+                +whs($t * 1.25)
+            +mr($t*1.25)
+        .sound-word
+            +mb($t*.5)
+            +posr
+            h1
+                +fs($t*4)
+                // +fs(500%)
+                // +w(80%)
+        .sw-small
+            h1
+                +fs($t*2.5)
+        .sound-sentence
+            button
+                // +p($t*.5)
+            h2
+                +fs($t*1.5)
+                +c($g)
+                +posr

@@ -1,0 +1,61 @@
+@import "./mixins"
+
+$b: #202020
+$bg: #f4f4f4
+$a: #E62245
+$a1: #ff4366
+$a2: #ff6083
+$a0: #cc1335
+$dg: #555
+$g: #737373
+$g2: #A6A6A6
+$lg: #f2f2f2
+$lg2: #e6e6e6
+
+$t: 16px
+$r: $t * 2
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+=poppins
+    font-family: 'Poppins', sans-serif
+=nanum
+    font-family: 'Nanum Pen Script', cursive
+=patrick
+    font-family: 'Patrick Hand', cursive
+
+
+
+$smallscr: 480px
+$normalscr: 1400px
+
+
+
+
+=button
+    +c(white)
+    +bdrrad($r)
+    +bdrn
+    +bdrb(grey, $t * .5)
+    &:hover
+        transform: scale(1.1)
+    &:active
+        transform: scale(1)
+
+.page
+    +whs(100%)
+    +oh
+
+*
+    +poppins
+    &::-webkit-scrollbar
+        +w($t*.25)
+
+    &::-webkit-scrollbar-track
+        background-color: transparent
+
+    &::-webkit-scrollbar-thumb
+        background-color: $g
+        +bdrrad($r)

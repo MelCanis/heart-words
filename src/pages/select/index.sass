@@ -1,0 +1,64 @@
+@import "../../sass/styles"
+@import "../../sass/mixins"
+
+.Select
+    +cenc
+    +bg($lg)
+    +fdc
+    +p(0 $t*2)
+    @media (max-width: $normalscr)
+        +p($t*2 $t)
+    .Logo
+        +fs($t*3)
+        line-height: $t*2.5
+        @media (max-width: $smallscr)
+            line-height: $t*1.75
+            +fs($t*2)
+        // +mb($t)
+        +cp
+        span
+            text-shadow: $t*.1 $t*.1 $t*.25 transparentize($g2, .5)
+            // text-shadow: none
+            +c($g)
+    h4
+        pointer-events: none
+        +c($g)
+        font-weight: 500
+        +bg($lg2)
+        // +bdr(transparentize($g2, .75), $t*.1)
+        // +bs(0 $t*.25 $t*.5 transparentize($g2, .5))
+        +bdrrad($r)
+        +mt($t*2)
+        +p($t*.5 $t*2)
+        +t($t*3)
+        +fs($t*1.5)
+        @media (max-width: $smallscr)
+            position: unset
+            +fs($t*1.25)
+            +c($g)
+            // font-weight: 300
+            transform: none
+            +mb(0)
+            +ml(0)
+            +bg($lg2)
+            +bdrrad($r)
+            +p($t*.5 $t*2)
+    .container
+        +p($t $t*2)
+        +w(100%)
+        +h(70%)
+        +df
+        +jca
+        +aic
+        +fw
+        overflow-y: scroll
+        +bdrrad($r)
+
+        @media (min-width: $smallscr)
+            +m($t*2 0)
+            +mt(0)
+            +pt(0)
+        @media (max-width: $normalscr)
+            +w(100%)
+            +h(100%)
+            

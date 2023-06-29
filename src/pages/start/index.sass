@@ -1,0 +1,54 @@
+@import "../../sass/styles"
+@import "../../sass/mixins"
+
+.Start
+    +fdc
+    +cenc
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+    .Logo
+        +ta(center)
+    button
+        +bdrn
+        +fs($t * 1.5)
+        +p($t*.5 $t*3.5)
+        +bdrrad($t*2)
+        +bg($a2)
+        +c(white)
+        
+        +mt($t*1.5)
+        +bs($t*.25 $t*.5 $t*.5 $a)
+        transition: .25s
+        &:hover
+            +bg(white)
+            +c($dg)
+        @media (max-width: $smallscr)
+            +mt($t)
+            +fs(200%)
+            +p(3% 15%)
+            // +fs($t*1.25)
+            // +p($t*.25 $t*2)
+
+
+
+
+
+
+
+.blinker
+    animation: blink 2s infinite
+    +fs($t * 4.7)
+    +c($g)
+    +ta(center)
+
+@keyframes blink
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+.message
+    +posa
+    +b($t * 4)
+    +cenX

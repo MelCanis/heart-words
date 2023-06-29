@@ -1,0 +1,26 @@
+@import "../../sass/styles"
+@import "../../sass/mixins"
+
+.Logo
+    $s: 8
+    +fs($t * $s)
+    line-height: $t*($s*.8)
+    letter-spacing: $t * -0.1
+    font-weight: 700
+    span
+        +c(white)
+        text-shadow: $t*.25 $t*.5 $t*.5 $a
+
+    transition: .25s
+
+    @media (max-width: $smallscr)
+        $s: 4
+        +fs(500%)
+        line-height: 90%
+        // +fs($t * $s)
+        // line-height: $t*($s*.8)
+
+// .Logo_top
+//     +posr
+//     +z(2)
+    // +c($a)

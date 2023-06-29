@@ -1,0 +1,52 @@
+@import "../../../../sass/styles"
+@import "../../../../sass/mixins"
+.List
+    // +mb($t*2)
+    +p($t*2)
+    +df
+    +fw
+    // +jcb
+    .word
+        +c($g2)
+        +c($b)
+        +fs($t*2.5)
+        // +p($t*.2 $t)
+        +bg($lg)
+        +bdr($lg2)
+        +c($g2)
+        +p($t*.5 $t*1.5)
+        +m($t * .5)
+        +mr($t)
+        +bdrn
+        +bdrrad($r)
+        // +bg(white)
+        // +bdr($g2, $t*.2)
+        // +bdrb($g, $t * .5)
+        // +bdrrad($r)
+        // +bs(0 $t $t $g2)
+        transition: .25s
+    @media (max-width: $normalscr)
+        +p($t*1.5)
+        +jca
+        .word
+            +f(.8)
+            +fs($t*1.75)
+            +p($t*.5 $t*1)
+            +m($t * .25 $t*.5)
+    @media (max-width: $smallscr)
+        +p($t)
+        overflow-y: scroll
+        +jca
+        .word
+            +f(.8)
+            +fs($t*1.25)
+            +p($t*.5 $t*1)
+            +m($t * .25)
+    .active
+        // +c(white)
+        transition: .25s
+        +c(white)
+        +bg($g)
+        // +bdr(transparent)
+        // +p($t*.4 $t*2)
+        transform: scale(1.15)

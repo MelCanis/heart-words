@@ -1,0 +1,47 @@
+@import "../../../../sass/styles"
+@import "../../../../sass/mixins"
+.Jot
+    +df
+    +bs($t*.25 $t*.5 $t transparentize($lg2, .5))
+    +mxw(120%)
+    flex: .4
+    // +fw
+    @media (max-width: $smallscr)
+        flex: .5
+
+.slot
+    +fs($t * 2)
+    +p($t * 4 $t * 3)
+    +bdr($lg)
+    +f(1)
+    // +m($t)
+    // +bdr($g2, $t * .25)
+    // +bdrr($g2, $t * .5)
+    // +bdrb($g, $t * .5)
+    // +bdrrad($r)
+    +cenc
+    +posr
+    +bg(white)
+    svg
+        +posa
+        +cenX
+        +t($t)
+        fill: $a
+    @media (max-width: $normalscr)
+        +fs($t*1.5)
+        +p($t * 3 $t * 2)
+    @media (max-width: $smallscr)
+        // +f(none)
+        +fs($t)
+        +p($t * 2 $t * 1.5)
+
+.small
+    +p($t * 3 $t * 2)
+    @media (max-width: $smallscr)
+        +p($t * 1.5 $t)
+
+.supersmall
+    +fs($t*.75)
+    +p($t * 2.5 $t * 1.5)
+    @media (max-width: $smallscr)
+        +p($t * 1 $t*.75)

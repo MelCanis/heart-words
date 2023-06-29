@@ -1,0 +1,25 @@
+@import "../../../../sass/styles"
+@import "../../../../sass/mixins"
+.Top
+    +df
+    +jcb
+    +aic
+    // +p(0 $t*2)
+    +p($t*2)
+    @media (max-width: $smallscr)
+        +p($t*1.5)
+    h3
+        +fs($t*1.25)
+        +c($dg)
+        font-weight: 400
+    button
+        // +c($b)
+        +bdrn
+        +bg(none)
+        +cenc
+        +cp
+        span
+            +fs($t*1.5)
+    svg
+        fill: $dg
+        +whs($t*1.5)

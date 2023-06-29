@@ -1,0 +1,85 @@
+@import "../../sass/styles"
+@import "../../sass/mixins"
+
+.listselect
+    text-shadow: 0 $t*.2 $t*.25 #08080836
+    +fs($t * 2)
+    font-weight: 500
+    // +m($t * 2)
+    // +whs($t * 10)
+    +wh(15%, 40%)
+    // @media (min-width: $normalscr)
+    
+    @media (max-width: $normalscr)
+        +m($t*.25)
+        +wh(15%, 40%)
+
+    @media (max-width: $smallscr)
+        +fs($t*1.5)
+        +wh(30%, 16%)
+        +bg(none)
+
+        
+    +c($dg)
+    +bdrrad($r)
+    +bdrn
+    +bg(none) 
+    // +bs($t*.25 $t*.5 $t transparentize($lg2, .5))
+    // +bdr($g, $t*.2)
+    // +bdrb($g, $t*.5)
+    // +bs($t*.25 $t*.5 $t $lg2)
+    +oh
+    +posr
+    svg
+        +cen
+        +whs(100%)
+        +bs($t*.25 $t*.5 $t $lg2)
+    .ls-f
+        // +posr
+        +z(1)
+    .ls-b
+        // +posr
+        // +z(.9)
+        +t(53%)
+
+    .ls-bg, .pseudoBg
+        +posa
+        +t(0)
+        +l(0)
+        +whs(100%)
+        transition: .25s
+    
+    .ls-bg
+        opacity: 1
+    .pseudoBg
+        opacity: 0
+        +bg(white)
+    .ls-gradient
+        +whs(100%)
+        // +bg(linear-gradient(transparent, #13131332))
+    span
+        +c(white)
+        +posr
+        +z(2)
+    transition: .25s
+    +cp
+    &:hover
+        transform: scale(1.2)
+        // +bs($t*.25 $t*.5 $t $lg2)
+        // +bg(white)
+        span
+            // +c($b)
+        // .ls-bg
+        //     opacity: 0
+        // .pseudoBg
+        //     opacity: 1
+.Back
+    +c(white)
+    +fs($t * 1.5)
+    +p($t*.5 $t*2)
+    +whs(max-content)
+    +bdrrad($r)
+    +bdrn
+    +bs(0 $t*.5 $t $lg2)
+    transition: .25s
+    &:hover
